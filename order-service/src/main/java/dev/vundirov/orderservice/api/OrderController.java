@@ -6,10 +6,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping(OrderController.ORDER_PATH)
 @RequiredArgsConstructor
 public class OrderController {
 
+  public static final String ORDER_PATH = "/api/v1/order";
   private final OrderService orderService;
 
   @PostMapping

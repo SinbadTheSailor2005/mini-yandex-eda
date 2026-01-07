@@ -1,15 +1,13 @@
 package dev.vundirov.orderservice.domain.entity;
 
 
-import dev.vundirov.orderservice.domain.PaymentStatus;
+import dev.vundirov.common.dto.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.math.BigDecimal;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 @Entity
 @Getter
 @Setter

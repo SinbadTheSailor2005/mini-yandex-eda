@@ -1,6 +1,6 @@
 package dev.vundirov.orderservice.api.dto.get;
 
-import dev.vundirov.orderservice.domain.PaymentStatus;
+import dev.vundirov.common.dto.PaymentStatus;
 import dev.vundirov.orderservice.domain.entity.OrderEntity;
 
 import java.math.BigDecimal;

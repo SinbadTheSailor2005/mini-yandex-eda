@@ -1,5 +1,6 @@
 package dev.vundirov.orderservice.api.dto;
 
+import dev.vundirov.common.dto.OrderDto;
 import dev.vundirov.orderservice.api.dto.get.RequestGetOrderDto;
 import dev.vundirov.orderservice.api.dto.post.RequestPostOrderDto;
 import dev.vundirov.orderservice.domain.entity.OrderEntity;
@@ -26,4 +27,8 @@ public interface OrderMapper {
   }
 
   RequestGetOrderDto toRequestGetOrderDto(OrderEntity orderEntity);
+
+  OrderEntity toEntity(OrderDto orderDto);
+
+  OrderDto toOrderDto1(OrderEntity orderEntity);
 }

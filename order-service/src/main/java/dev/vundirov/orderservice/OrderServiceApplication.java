@@ -3,7 +3,7 @@ package dev.vundirov.orderservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication (scanBasePackages = "dev.vundirov")
 public class OrderServiceApplication {
 
 	public static void main(String[] args) {

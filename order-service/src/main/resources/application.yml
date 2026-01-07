@@ -1,5 +1,4 @@
 spring:
-
   datasource:
     driver-class-name: org.postgresql.Driver
     password: postgres
@@ -10,6 +9,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+  kafka:
+    consumer:
+      group-id: payment-group
+    bootstrap-servers: localhost:9092
 
 server:
   port: 8080
+
+services:
+    warehouse:
+        url: http://localhost:8081/
