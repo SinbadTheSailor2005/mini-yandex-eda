@@ -5,13 +5,11 @@ spring:
     username: postgres
     url: jdbc:postgresql://localhost/orders
   application:
-    name: payment-service
+    name: order-service
   jpa:
     hibernate:
       ddl-auto: create
   kafka:
-    consumer:
-      group-id: payment-group
     bootstrap-servers: localhost:9092
 
 server:

@@ -23,8 +23,11 @@ import java.util.Map;
 
 @Configuration
 public class KafkaConfiguration {
-  public static final String PAYMENT_TOPIC = "payment-requests";
-  public static final String PAYMENT_RESULT_TOPIC = "payment-results";
+  public static final String ORDER_CREATED_TOPIC = "order-created";
+  public static final String NO_ITEMS_WAREHOUSE_CANCELLED_TOPIC = "warehouse-cancelled";
+  public static final String WAREHOUSE_READY_TOPIC = "warehouse-ready";
+  public static final String PAYMENT_SUCCESS_TOPIC = "payment-success";
+  public static final String PAYMENT_FAILED_TOPIC = "payment-failed";
   @Bean
   DefaultKafkaProducerFactory<String, OrderDto> orderDtoProducerFactory(
           KafkaProperties properties) {
@@ -72,13 +75,46 @@ public class KafkaConfiguration {
     return factory;
   }
 
+
   @Bean
-  public NewTopic paymentTopic() {
-    return TopicBuilder.name(PAYMENT_TOPIC).partitions(3).replicas(1).build();
+  public NewTopic orderCreatedTopic () {
+    return TopicBuilder.name(NO_ITEMS_WAREHOUSE_CANCELLED_TOPIC)
+            .partitions(3)
+            .replicas(1)
+            .build();
   }
 
   @Bean
-  public NewTopic paymentResultTopic() {
-    return TopicBuilder.name(PAYMENT_RESULT_TOPIC).partitions(3).replicas(1).build();
+  public  NewTopic orderCancelledTopic() {
+    return TopicBuilder.name(NO_ITEMS_WAREHOUSE_CANCELLED_TOPIC)
+            .partitions(3)
+            .replicas(1)
+            .build();
   }
+
+  @Bean
+  public NewTopic wareHouseReadyTopic() {
+    return TopicBuilder.name(WAREHOUSE_READY_TOPIC)
+            .partitions(3)
+            .replicas(1)
+            .build();
+  }
+
+  @Bean
+  public NewTopic paymentSuccessTopic() {
+    return TopicBuilder.name(PAYMENT_SUCCESS_TOPIC)
+            .partitions(3)
+            .replicas(1)
+            .build();
+  }
+
+  @Bean
+ public  NewTopic paymentFailedTopic() {
+    return TopicBuilder.name(PAYMENT_FAILED_TOPIC)
+            .partitions(1)
+            .replicas(1)
+            .build();
+  }
+
+
 }

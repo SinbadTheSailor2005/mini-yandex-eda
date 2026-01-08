@@ -7,6 +7,16 @@
           <package value="dev.sorokin.orderservice" />
         </packages>
       </persistence-unit>
+      <persistence-unit moduleName="order-platform.payment-service.main" name="Default">
+        <packages>
+          <package value="dev.vundirov.paymentservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="order-platform.warehouse-service.main" name="Default">
+        <packages>
+          <package value="dev.vundirov" />
+        </packages>
+      </persistence-unit>
     </persistence-units>
   </component>
 </project>

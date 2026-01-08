@@ -1,4 +1,4 @@
-package dev.sorokin.paymentservice;
+package dev.vundirov.paymentservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

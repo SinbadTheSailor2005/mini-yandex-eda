@@ -3,5 +3,7 @@
   <component name="AmplicodeJpaIdeaProjectConfig" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
+    <option name="newEntityIdType" value="Long" />
+    <option name="newEntitySequenceItemName" value="&lt;Provided by ORM&gt;" />
   </component>
 </project>

@@ -30,5 +30,5 @@ public interface OrderMapper {
 
   OrderEntity toEntity(OrderDto orderDto);
 
-  OrderDto toOrderDto1(OrderEntity orderEntity);
+  OrderDto toSharedOrderDto(OrderEntity orderEntity);
 }
