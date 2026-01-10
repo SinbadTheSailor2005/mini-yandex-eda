@@ -3,6 +3,8 @@
   <component name="AmplicodeJpaIdeaProjectConfig" newRepositoryParent="org.springframework.data.jpa.repository.JpaRepository">
     <option name="defaultUnitInitialized" value="true" />
     <option name="renamerInitialized" value="true" />
+    <option name="reverseEngineeringLastDbConnectionId" value="1d484329-4c91-43f6-a0b0-b4e707d0b3f8" />
+    <option name="reLastEntityCreationPackage" value="order-service/src/main/java/dev/vundirov/orderservice/domain" />
     <option name="newEntityIdType" value="Long" />
     <option name="newEntitySequenceItemName" value="&lt;Provided by ORM&gt;" />
   </component>
