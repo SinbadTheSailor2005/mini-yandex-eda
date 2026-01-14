@@ -37,7 +37,7 @@ private static final Logger logger = LoggerFactory.getLogger(OrderService.class)
     Order order = orderMapper.toEntity(dto);
     Order resultOrder = orderRepository.save(order);
     OrderCreatedEvent orderCreatedEvent =
-            orderMapper.toOrderCreatedEvent(order); // TODO: не resultOrder?
+            orderMapper.toOrderCreatedEvent(resultOrder);
     logger.info("Sending to kafka {} object {}", KafkaConfiguration.ORDER_CREATED_TOPIC,
             orderCreatedEvent
     );
