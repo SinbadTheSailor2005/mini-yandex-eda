@@ -11,7 +11,7 @@ pipeline {
                 checkout scm
             }
         }
-
+        
        stage('Prepare Environment') {
            steps {
                withCredentials([file(credentialsId: 'my-app-env', variable: 'ENV_FILE')]) {
@@ -25,7 +25,14 @@ pipeline {
                 sh "docker compose -f ${COMPOSE_FILE} down || true"
             }
         }
+stage('Test') {
+    steps {
+        sh 'chmod +x gradlew'
 
+    
+        sh './gradlew test --no-daemon'
+    }
+}
         stage('Build & Deploy') {
             steps { 
                 sh "docker compose -f ${COMPOSE_FILE} up -d --build"
