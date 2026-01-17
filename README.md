@@ -27,7 +27,7 @@ A robust microservices-based backend system for order processing. This project d
 | **Core** | Java 21, Spring Boot, Spring Data JPA |
 | **Messaging** | Apache Kafka |
 | **Database** | PostgreSQL |
-| **DevOps** | Docker, Docker Compose, Jenkins, Gradle (Kotlin DSL) |
+| **DevOps** | Docker, Docker Compose, Jenkins, Gradle|
 | **Testing** | JUnit 5, Testcontainers, Awaitility|
 
 
